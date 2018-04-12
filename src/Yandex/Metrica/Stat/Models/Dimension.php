@@ -15,6 +15,8 @@ class Dimension extends Model
 
     protected $propNameMap = [];
 
+    protected $extraProps = [];
+
     /**
      * Retrieve the id property
      *

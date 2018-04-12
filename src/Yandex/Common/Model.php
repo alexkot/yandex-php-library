@@ -13,6 +13,7 @@ namespace Yandex\Common;
 
 /**
  * Class Model
+ * @property  array extraProps
  * @package Yandex\Common
  */
 abstract class Model
@@ -81,6 +82,8 @@ abstract class Model
                 } else {
                     $this->{$propertyName} = $val;
                 }
+            } elseif (property_exists($this, 'extraProps')) {
+                $this->extraProps[$key] = $val;
             }
         }
         return $this;
